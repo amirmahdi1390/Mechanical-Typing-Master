@@ -46,10 +46,10 @@ No additional setup or dependencies required.
 
 ## 🎨 here are some pictures of the game
 
-```markdown
+
 ![Screenshot 1](./assets/screenshots/screenshot1.png)
 ![Screenshot 2](./assets/screenshots/screenshot2.png)
-```
+
 
 ## 👤 Author
 
