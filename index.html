@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Typing Master</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-keyboard"></i>
+            <span>Mechanical Typing Master</span>
+        </div>
+        <div class="navbar-controls">
+            <div class="navbar-selects">
+                <select id="languageSelect" class="language-option">
+                    <option value="english">English</option>
+                    <option value="persian">Persian</option>
+                    <option value="coding">Coding</option>
+                    <option value="numbers">Numbers</option>
+                </select>
+                <select id="levelSelect" class="level-option">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Text Display Section -->
+        <section class="text-display-section">
+            <div class="typing-area">
+                <div class="letter-parent"></div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-value timer" id="timer">60s</div>
+                    <div class="stat-label">Time Remaining</div>
+                </div>
+               
+             
+                <div class="stat-item">
+                    <div class="stat-value mistakes "id="mistakes">0</div>
+                    <div class="stat-label">Mistakes</div>
+                </div>
+            </div>
+            <button class="restart-button" id="restartButton">
+                <i class="fas fa-redo"></i>
+                <span>Restart Test</span>
+            </button>
+        </section>
+        
+        <!-- Keyboard Section -->
+        <section class="keyboard-section">
+            <div class="keyboard-container">
+                <div class="keyboard-image">
+                    <img src="none.jpg" alt="" style="width: 100%; height: 100%;" class="keyboard-img">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Settings Modal -->
+    
+    <!-- Results Modal -->
+    <div class="modal-overlay finish-result" id="resultsModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Test Results</h3>
+                <button class="modal-close" id="closeResults">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="result-stats">
+                    <div class="result-stat">
+                        <div class="result-value wpm-result" id="resultWpm">0</div>
+                        <div class="result-label">WPM</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="result-value accuracy-result" id="resultAccuracy">100%</div>
+                        <div class="result-label">Accuracy</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="result-value time-spent" id="resultTime">0s</div>
+                        <div class="result-label">Time</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="result-value mistakes-result" id="resultMistakes">0</div>
+                        <div class="result-label">Mistakes</div>
+                    </div>
+                </div>
+                
+                <h4>Performance Chart</h4>
+                <div class="chart-container">
+                    <canvas id="resultsChart"></canvas>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="button" id="restartFromResults">
+                    <i class="fas fa-redo"></i>
+                    <span>Try Again</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay faild-result">
+        <div class="modal2">
+            <div class="modal-header2">
+                <h3 class="modal-title2">You got failed</h3>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body2">
+                <div class="result-stats2">
+                    <div class="result-stat2">
+                        <div class="result-value2">0</div>
+                        <div class="result-label2">WPM</div>
+                    </div>
+                    <div class="result-stat2">
+                        <div class="result-value2">0</div>
+                        <div class="result-label2">Accuracy</div>
+                    </div>
+                    <div class="result-stat2">
+                        <div class="result-value2">whole time</div>
+                        <div class="result-label2">Time</div>
+                    </div>
+                    <div class="result-stat2">
+                        <div class="result-value2">0</div>
+                        <div class="result-label2">Mistakes</div>
+                    </div>
+                </div>
+                
+                
+                <div class="chart-container2">
+                   <div>
+                    No data has curated
+                   </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <audio src="1145454 (mp3cut.net).mp3" style="display:hidden"></audio>
+   <script type="module" src="script.js"></script>
+</body>
+</html>
