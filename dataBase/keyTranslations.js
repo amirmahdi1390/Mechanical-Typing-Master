@@ -30,7 +30,7 @@ const keyTranslations = {
 	ر: "v",
 	ذ: "b",
 	د: "n",
-	پ: "m",
+	ئ: "m",
 	و: ",",
 	آ: "h",
 	ژ: "c",
@@ -42,7 +42,7 @@ const keyTranslations = {
 	"/": "slash",
 	"|": "shiftBackSlash",
 	",": "comma",
-	"،": "t",   
+	"،": "t",
 	" ": "space",
 };
 export default keyTranslations;
